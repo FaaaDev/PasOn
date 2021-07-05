@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/view_pager_bottom_sheet_behavior"
+    android:id="@+id/bottom_sheet">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:fontFamily="@font/dosis_bold"
+                            android:text="Tambah Produk"
+                            android:textColor="#1b1b1b"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_weight="1"/>
+                        <ImageView
+                            android:id="@+id/exit"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_baseline_close_24"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            tools:targetApi="lollipop" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:nestedScrollingEnabled="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="60dp"
+                            android:fontFamily="@font/dosis_medium"
+                            android:text="Tambah Foto Produk"
+                            android:textColor="#1b1b1b"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="201dp"
+                                android:layout_height="201dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/stroke_10dp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="0dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="200dp"
+                                        android:layout_height="200dp">
+
+                                        <ImageView
+                                            android:id="@+id/img"
+                                            android:layout_width="200dp"
+                                            android:layout_height="200dp"
+                                            android:scaleType="centerCrop" />
+
+                                        <ImageButton
+                                            android:id="@+id/caim"
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginTop="2dp"
+                                            android:layout_marginEnd="2dp"
+                                            android:layout_marginRight="2dp"
+                                            android:background="@drawable/cancel_90px"
+                                            android:visibility="gone" />
+
+                                        <ImageButton
+                                            android:id="@+id/add"
+                                            android:layout_width="52dp"
+                                            android:layout_height="52dp"
+                                            android:layout_centerInParent="true"
+                                            android:background="@drawable/add_90px" />
+                                    </RelativeLayout>
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginEnd="20dp">
+
+                            <EditText
+                                android:id="@+id/productname"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="12dp"
+                                android:background="@drawable/et_primary"
+                                android:fontFamily="@font/dosis_regular"
+                                android:hint="Sayur Sehat"
+                                android:inputType="textCapWords"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginLeft="12dp"
+                                android:background="@drawable/background_label"
+                                android:fontFamily="@font/dosis_medium"
+                                android:text="Nama Produk"
+                                android:textColor="#1b1b1b"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginEnd="20dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="12dp"
+                                android:background="@drawable/spinner_primary">
+
+                                <Spinner
+                                    android:id="@+id/spinner_kategori"
+                                    android:layout_height="match_parent"
+                                    android:layout_width="match_parent"
+                                    android:fontFamily="@font/dosis_medium" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:background="@drawable/background_label"
+                                android:fontFamily="@font/dosis_medium"
+                                android:text="Kategori"
+                                android:textColor="#1b1b1b"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="12dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginEnd="20dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="12dp"
+                                android:background="@drawable/et_primary">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_marginRight="12dp"
+                                    android:fontFamily="@font/dosis_medium"
+                                    android:text="Rp."
+                                    android:textColor="#1b1b1b"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/price"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#00000000"
+                                    android:fontFamily="@font/dosis_regular"
+                                    android:hint="20000 (Sudah Termasuk Ongkir)"
+                                    android:inputType="number"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginLeft="12dp"
+                                android:background="@drawable/background_label"
+                                android:fontFamily="@font/dosis_medium"
+                                android:text="Harga"
+                                android:textColor="#1b1b1b"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginEnd="20dp">
+
+                            <EditText
+                                android:id="@+id/desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="12dp"
+                                android:background="@drawable/et_primary"
+                                android:fontFamily="@font/dosis_regular"
+                                android:gravity="top"
+                                android:hint="Sayuran ini sangat segar"
+                                android:inputType="textMultiLine"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginLeft="12dp"
+                                android:background="@drawable/background_label"
+                                android:fontFamily="@font/dosis_medium"
+                                android:text="Deskripsi"
+                                android:textColor="#1b1b1b"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="80dp"
+                            android:layout_marginBottom="50dp"
+                            android:gravity="center_vertical">
+
+                            <Button
+                                android:id="@+id/submit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:background="@drawable/btn_primary"
+                                android:fontFamily="@font/dosis_medium"
+                                android:text="Tambahkan"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffff" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</LinearLayout>
